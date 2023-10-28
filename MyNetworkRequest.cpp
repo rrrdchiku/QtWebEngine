@@ -1,3 +1,4 @@
+// This is just POC
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QNetworkReply>
