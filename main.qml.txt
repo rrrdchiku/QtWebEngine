@@ -1,0 +1,19 @@
+import QtWebEngine 1.7
+import QtWebChannel 1.0
+
+WebView {
+    id: webview
+    url: "your_html_file.html"
+
+    WebChannel {
+        id: webchannel
+        registeredObjects: [
+            networkRequest
+        ]
+    }
+
+    Component.onCompleted: {
+        // Send data to the server via the C++ class
+        networkRequest.sendRequest("https://yourserver.com/api", JSON.stringify({ key: "value" }));
+    }
+}

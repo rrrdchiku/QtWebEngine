@@ -1,0 +1,10 @@
+// MyNetworkRequest.h
+#include <QObject>
+
+class MyNetworkRequest : public QObject {
+    Q_OBJECT
+public:
+    MyNetworkRequest();
+public slots:
+    void sendRequest(const QString& url, const QString& data);
+};
